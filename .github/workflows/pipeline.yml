@@ -23,10 +23,15 @@ jobs:
         run: npm run build
       - name: run the tests
         run: npm run test
-      - name: deploy to github pages
-        run: |
-          git config user.name "satuhyva" && git config "hyvarinen.satu.i@gmail.com" 
-          npm run deploy
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+      # - name: deploy to github pages
+      #   run: |
+      #     git config user.name "satuhyva" && git config "hyvarinen.satu.i@gmail.com" 
+      #     npm run deploy
       # - uses: akhileshns/heroku-deploy@v3.8.9
       #   with:
       #     heroku_api_key: ${{secrets.HEROKU_API_KEY}}
