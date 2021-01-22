@@ -23,6 +23,8 @@ jobs:
         run: npm run build
       - name: run the tests
         run: npm run test
+      - name: deploy to github pages
+        run: npm run deploy
       # - uses: akhileshns/heroku-deploy@v3.8.9
       #   with:
       #     heroku_api_key: ${{secrets.HEROKU_API_KEY}}
