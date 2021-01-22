@@ -1,0 +1,2 @@
+(this.webpackJsonpsqlclient=this.webpackJsonpsqlclient||[]).push([[7],{215:function(t,e,n){"use strict";n.r(e);var s=n(2);n(0);e.default=function(){return Object(s.jsx)("div",{children:"Vote"})}}}]);
+//# sourceMappingURL=7.5db8d87b.chunk.js.map

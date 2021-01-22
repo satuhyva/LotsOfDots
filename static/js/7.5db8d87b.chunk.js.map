@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/vote/Vote.tsx"],"names":["Vote"],"mappings":"+HAaeA,UAVQ,WAEnB,OACI","file":"static/js/7.5db8d87b.chunk.js","sourcesContent":["import React from 'react'\n\n\nconst Vote: React.FC = () => {\n\n    return(\n        <div>\n        Vote\n        </div>\n      \n    )\n}\n\nexport default Vote"],"sourceRoot":""}
