@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = 'https://lotsofdotsbackend.herokuapp.com'    //'/votings'
+const baseUrl = 'https://lotsofdotsbackend.herokuapp.com/votings'    //'/votings'
 
 export type VoteSubmissionData = {
     question: string,
