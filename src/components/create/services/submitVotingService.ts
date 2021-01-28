@@ -9,7 +9,7 @@ export type VoteSubmissionData = {
     options: string[]
 }
 export type VoteSubmissionResult = {
-    success: boolean,
+    success: boolean,                          
     code?: string,
     error?: string
 }

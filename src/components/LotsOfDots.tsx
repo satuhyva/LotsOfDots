@@ -6,9 +6,15 @@ const CreateVoting = lazy(() => import('./create/CreateVoting'))
 const Vote = lazy(() => import('./vote/Vote'))
 const ViewVoting = lazy(() => import('./view/ViewVoting'))
 
+type Token = {
+    thetoken: string
+}
 
 const LotsOfDots: React.FC = () => {
 
+    const myMatch = BrowserRouter.useRouteMatch('/token/:thetoken')
+    const parameters = myMatch?.params as Token
+    const possibleToken =  parameters !== undefined ? parameters.thetoken : 'No token' 
 
     return(
         <Suspense fallback={<div>LOADING DATA...</div>}>
@@ -24,6 +30,9 @@ const LotsOfDots: React.FC = () => {
                 </BrowserRouter.Route>
                 <BrowserRouter.Route path='/view'>
                     <ViewVoting/>
+                </BrowserRouter.Route>
+                <BrowserRouter.Route path='/token'>
+                    <div>{possibleToken}</div>
                 </BrowserRouter.Route>
                 <BrowserRouter.Route path='/'>
                     <Home/>
