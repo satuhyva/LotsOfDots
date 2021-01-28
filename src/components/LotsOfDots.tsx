@@ -10,6 +10,7 @@ const ViewVoting = lazy(() => import('./view/ViewVoting'))
 //     thetoken: string
 // }
 type Match = {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     myMatch: any
 }
 
