@@ -5,7 +5,7 @@ const ViewVoting: React.FC = () => {
 
     return(
         <div>
-        ViewVoting
+        ViewVoting XXX
         </div>
       
     )
