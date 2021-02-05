@@ -1,6 +1,10 @@
 import axios from 'axios'
 
-const baseUrl = 'https://lotsofdotsserver.herokuapp.com/votings'    //'/votings'
+let baseUrl = 'http://localhost:3000'
+if (process.env.NODE_ENV === 'production') {
+    baseUrl = 'https://lotsofdotsserver.herokuapp.com'
+}
+
 
 export type VoteSubmissionData = {
     question: string,
@@ -18,7 +22,7 @@ export type VoteSubmissionResult = {
 const submitVotingData = async (votingData: VoteSubmissionData): Promise<VoteSubmissionResult> => {
     try {
         const requestBody = votingData
-        const response = await axios.post<string>(baseUrl, requestBody)
+        const response = await axios.post<string>(`${baseUrl}/votings`, requestBody)
         return { success: true, code: response.data }
     } catch (error) {
         console.log(error)
