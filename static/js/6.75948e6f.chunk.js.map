@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/view/ViewVoting.tsx"],"names":["ViewVoting"],"mappings":"+HAaeA,UAVc,WAEzB,OACI","file":"static/js/6.75948e6f.chunk.js","sourcesContent":["import React from 'react'\n\n\nconst ViewVoting: React.FC = () => {\n\n    return(\n        <div>\n        ViewVoting XXX\n        </div>\n      \n    )\n}\n\nexport default ViewVoting"],"sourceRoot":""}
