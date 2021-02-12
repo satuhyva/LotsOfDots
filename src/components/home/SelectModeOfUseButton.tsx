@@ -1,9 +1,9 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
-import { useSelectModeOfUseButtonStyles } from './useSelectModeOfUseButtonStyles'
-import { UseModeWithDescription } from './UseModesWithDescription'
-import { modeOfUse } from '../../state/modeOfUse'
+import { useStyles } from './styles'
+import { UseModeWithDescription } from './ModesOfUseDictionary'
+import { modeOfUse } from '../../types/ModeOfUse'
 import * as BrowserRouter from 'react-router-dom'
 
 
@@ -15,7 +15,7 @@ interface UseModeSelectionButtonProps {
 
 const SelectModeOfUseButton: React.FC<UseModeSelectionButtonProps> = ({ modeWithDescription, selectModeOfUse }) => {
 
-    const classes = useSelectModeOfUseButtonStyles()
+    const classes = useStyles()
 
     return(
         <Button

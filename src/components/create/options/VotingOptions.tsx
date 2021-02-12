@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useVotingOptionsStyles } from './votingOptionsStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import Buttons from '../buttons/Buttons'
 import { Step, Options } from '../../../types/StepsWithValues'
@@ -27,7 +27,7 @@ export enum OptionListActions {
 
 const VotingOptions: React.FC<VotingOptionsProps> = ({ setActiveStep, updateStepsWithValues, step }) => {
 
-    const classes = useVotingOptionsStyles()
+    const classes = useStyles()
     const [currentOptions, setCurrentOptions] = useState<string[]>(step.value === undefined ? [] : step.value)
     const [isEditing, setIsEditing] = useState<string | undefined>(currentOptions.length > 1 ? undefined : '')
  

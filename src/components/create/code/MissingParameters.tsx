@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGetCodeStyles } from './getCodeStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import { Step } from '../../../types/StepsWithValues'
 
@@ -11,7 +11,7 @@ type MissingParametersProps = {
 
 const MissingParameters: React.FC<MissingParametersProps> = ({ stepsWithMissingValues }) => {
 
-    const classes = useGetCodeStyles()
+    const classes = useStyles()
 
     return (
         <div className={classes.outerContainer}>

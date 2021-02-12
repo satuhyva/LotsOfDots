@@ -30,6 +30,10 @@ const CreateVoting: React.FC = () => {
         updateStepsWithValues: updateStepsWithValues
     }
 
+    const resetValues = () => {
+        setStepsWithValues(initialStepValues)
+    }
+
     return(
         <div>
             {code === undefined ?
@@ -40,10 +44,10 @@ const CreateVoting: React.FC = () => {
                     {activeStep === 1 && <VotingOptions {...commonProps} step={stepsWithValues[1]} />}
                     {activeStep === 2 && <SettingCount {...commonProps} step={stepsWithValues[2]} />}
                     {activeStep === 3 && <SettingIdentity {...commonProps} step={stepsWithValues[3]} />}
-                    {activeStep === 4 && <GetCode {...commonProps} stepsWithValues={stepsWithValues} setCode={setCode}/>}
+                    {activeStep === 4 && <GetCode {...commonProps} stepsWithValues={stepsWithValues} setCode={setCode} resetValues={resetValues}/>}
                 </>
                 :
-                <Success stepsWithValues={stepsWithValues} code={code}/>
+                <Success code={code}/>
             }
         </div>
       

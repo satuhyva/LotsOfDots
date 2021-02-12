@@ -1,5 +1,5 @@
 import React from 'react'
-import { useButtonStyles } from './buttonStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 
@@ -14,13 +14,16 @@ type ButtonProps = {
 const Buttons: React.FC<ButtonProps> = ({ activeStep, setActiveStep, value }) => {
 
 
-    const classes = useButtonStyles()
+    const classes = useStyles()
 
     const goBack = () => {
         setActiveStep(activeStep - 1)
     }
     const goFurther = () => {
         setActiveStep(activeStep + 1)
+    }
+    const canProceedToNext = () => {
+        return activeStep < 4 && value !== undefined && value !== '' && !(Array.isArray(value) && value.length < 2)
     }
 
 
@@ -31,7 +34,7 @@ const Buttons: React.FC<ButtonProps> = ({ activeStep, setActiveStep, value }) =>
                     <Typography className={classes.buttonText}>BACK</Typography>
                 </Button>   
             }
-            {activeStep < 4 && value !== undefined && value !== '' && !(Array.isArray(value) && value.length < 2) &&
+            {canProceedToNext() &&
                 <Button onClick={goFurther} className={classes.iconButton} data-testid='button-next' >
                     <Typography  className={classes.buttonText}>NEXT</Typography>
                 </Button>

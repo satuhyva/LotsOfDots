@@ -15,7 +15,6 @@ type RadioButtonProps = {
 const RadioButtons: React.FC<RadioButtonProps> = ({ saveCountData, selectedValue }) => {
 
     const handleSelectionChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(event.target.value)
         saveCountData(event.target.value)
     }
 

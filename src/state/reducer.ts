@@ -1,6 +1,6 @@
 import { Action, actionTypes } from './actions'
-import { State } from './state'
-import { modeOfUse } from './modeOfUse'
+import { State } from '../types/State'
+import { modeOfUse } from '../types/ModeOfUse'
 
 
 export const reducer = (state: State, action: Action): State => {

@@ -1,14 +1,16 @@
-import React from 'react'
-import { useGetCodeStyles } from './getCodeStyles'
+import React, { useContext } from 'react'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import { StepsWithValues } from '../../../types/StepsWithValues'
 import PreviewVoting from './PreviewVoting'
 import MissingParameters from './MissingParameters'
 import Buttons from './Buttons'
 import { getFormattedVotingData } from './getFormattedVotingData'
-import submitVotingService from '../services/submitVotingService'
+import submitVotingService from './service'
 import { getStepsWithMissingValues } from './getStepsWithMissingValues'
 import { useState } from 'react'
+import AppContext from '../../../state/AppContext'
+import { actionTypes } from '../../../state/actions'
 
 
 
@@ -16,31 +18,32 @@ type GetCodeProps = {
     setActiveStep: (newStep: number) => void,
     stepsWithValues: StepsWithValues,
     setCode: (newCode: string) => void,
+    resetValues: () => void
 }
 
 
 
-const GetCode: React.FC<GetCodeProps> = ({ setActiveStep, stepsWithValues, setCode }) => {
+const GetCode: React.FC<GetCodeProps> = ({ setActiveStep, stepsWithValues, setCode, resetValues }) => {
 
-    const classes = useGetCodeStyles()
+    const classes = useStyles()
     const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined)
-
+    const { dispatch } = useContext(AppContext)
     const stepsWithMissingValues = getStepsWithMissingValues(stepsWithValues)
 
     const submitVotingData = async () => {
-        console.log('submitVotingData')
         const votingData = getFormattedVotingData(stepsWithValues)
         const submissionResponse = await submitVotingService.submitVotingData(votingData)
-        console.log(submissionResponse)
         if (submissionResponse.success && submissionResponse.code) {
             setCode(submissionResponse.code)
+            resetValues()
+            dispatch({ type: actionTypes.SET_VOTING_NUMBER, data: submissionResponse.code })
         } else {
             if (!submissionResponse.success && submissionResponse.error) {
                 setErrorMessage(submissionResponse.error)
             }
         }
     }
-    console.log(errorMessage)
+
 
     return(
         <div className={classes.outerContainer}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSettingCountStyles } from './settingCountStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import Buttons from '../buttons/Buttons'
 import { Step, Count } from '../../../types/StepsWithValues'
@@ -15,7 +15,7 @@ type SettingCountProps = {
 
 const SettingCount: React.FC<SettingCountProps> = ({ setActiveStep, updateStepsWithValues, step }) => {
 
-    const classes = useSettingCountStyles()
+    const classes = useStyles()
 
     const saveCountData = (updatedCount: string) => {
         updateStepsWithValues({ ...step, value: parseInt(updatedCount) })
@@ -34,19 +34,15 @@ const SettingCount: React.FC<SettingCountProps> = ({ setActiveStep, updateStepsW
                     saveCountData={saveCountData}
                     selectedValue={step.value === undefined ? '' : step.value.toString() }
                 />
-                
                 <>
                     <Buttons
                         activeStep={step.index}
                         setActiveStep={setActiveStep}
                         value={step.value}
                     />
-                </>
-                
+                </>               
             </div>
-        </div>
-
-      
+        </div>      
     )
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useQuestionStyles } from './questionStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import Buttons from '../buttons/Buttons'
 import { Step, Question } from '../../../types/StepsWithValues'
@@ -15,7 +15,7 @@ type CreateQuestionProps = {
 
 const CreateQuestion: React.FC<CreateQuestionProps> = ({ setActiveStep, updateStepsWithValues, step }) => {
 
-    const classes = useQuestionStyles()
+    const classes = useStyles()
     const [isEditing, setIsEditing] = useState(step.value === undefined ? true : false)
 
     const saveQuestion = (updatedQuestion: string) => {

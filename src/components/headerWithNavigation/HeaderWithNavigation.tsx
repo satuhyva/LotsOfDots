@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import AppContext from '../../state/context'
+import AppContext from '../../state/AppContext'
 import Header from '../header/Header'
 import Navigation from '../navigation/Navigation'
 import { useHeaderWithNavigationStyles } from './headerWithNavigationStyles'

@@ -1,7 +1,6 @@
 import React from 'react'
-import { useVotingOptionsStyles } from './votingOptionsStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
-// import { Step, Options } from '../../../types/StepsWithValues'
 import { OptionListActions } from './VotingOptions'
 import { IconButton, List, ListItemText } from '@material-ui/core'
 import { ListItem } from '@material-ui/core'
@@ -19,7 +18,7 @@ type OptionsListProps = {
 
 const OptionsList: React.FC<OptionsListProps> = ({ currentOptions, updateOptionsList, selectOptionForEditing }) => {
 
-    const classes = useVotingOptionsStyles()
+    const classes = useStyles()
 
     const removeOptionFromList = (optionToRemove: string) => {
         updateOptionsList(OptionListActions.REMOVE, '', optionToRemove)
@@ -58,8 +57,7 @@ const OptionsList: React.FC<OptionsListProps> = ({ currentOptions, updateOptions
                             </IconButton>                           
                         </ListItem>
                         <Divider/>
-                    </React.Fragment>
-                     
+                    </React.Fragment>   
                 )
             })}             
         </List>

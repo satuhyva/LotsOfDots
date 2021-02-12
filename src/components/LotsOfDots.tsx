@@ -3,7 +3,7 @@ import * as BrowserRouter from 'react-router-dom'
 
 const Home = lazy(() => import('./home/Home'))
 const CreateVoting = lazy(() => import('./create/CreateVoting'))
-const Vote = lazy(() => import('./vote/Vote'))
+const Vote = lazy(() => import('./vote/vote-main/Vote'))
 const ViewVoting = lazy(() => import('./view/ViewVoting'))
 
 

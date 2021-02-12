@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react'
 import { reducer } from './reducer'
-import { initialState } from './state'
-import AppContext from './context'
+import { initialState } from '../types/State'
+import AppContext from './AppContext'
 
 
 const AppContextWithStateProvider: React.FC = ({ children }) => {

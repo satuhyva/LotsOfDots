@@ -1,4 +1,4 @@
-import { modeOfUse } from './modeOfUse'
+import { modeOfUse } from '../types/ModeOfUse'
 import { Voting } from '../types/Voting'
 
 

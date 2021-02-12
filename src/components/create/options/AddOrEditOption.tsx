@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { useVotingOptionsStyles } from './votingOptionsStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
-// import { Step, Options } from '../../../types/StepsWithValues'
 import { OptionListActions } from './VotingOptions'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
@@ -20,9 +19,11 @@ type AddOrEditOptionProps = {
     currentOptions: string[]
 }
 
+
+
 const AddOrEditOption: React.FC<AddOrEditOptionProps> = ({ updateOptionsList,  isEditing, currentOptions }) => {
 
-    const classes = useVotingOptionsStyles()
+    const classes = useStyles()
     const [option, setOption] = useState(isEditing !== undefined ? isEditing : '')
     const [actionType] = useState(isEditing === undefined ? OptionListActions.ADD : (isEditing !== '' ? OptionListActions.MODIFY : OptionListActions.ADD))
 

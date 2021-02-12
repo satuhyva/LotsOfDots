@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSettingIdentityStyles } from './settingIdentityStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import Buttons from '../buttons/Buttons'
 import { Step, Identity } from '../../../types/StepsWithValues'
@@ -15,7 +15,7 @@ type SettingIdentityProps = {
 
 const SettingIdentity: React.FC<SettingIdentityProps> = ({ setActiveStep, updateStepsWithValues, step }) => {
 
-    const classes = useSettingIdentityStyles()
+    const classes = useStyles()
 
     const saveIdentityData = (updatedIdentity: string) => {
         updateStepsWithValues({ ...step, value: updatedIdentity === 'true' ? true : false })

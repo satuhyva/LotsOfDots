@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGetCodeStyles } from './getCodeStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import { StepsWithValues } from '../../../types/StepsWithValues'
 
@@ -11,7 +11,7 @@ type PreviewVotingProps = {
 
 const PreviewVoting: React.FC<PreviewVotingProps> = ({ stepsWithValues }) => {
 
-    const classes = useGetCodeStyles()
+    const classes = useStyles()
 
     return(
         <div className={classes.previewContainer}>

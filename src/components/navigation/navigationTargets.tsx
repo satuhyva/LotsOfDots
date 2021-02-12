@@ -15,11 +15,13 @@ type NavigationTarget = {
 
 export const getNavigationTargets = (): NavigationTarget[] => {
 
+    const commonProps = { style: { color: theme.palette.primary.contrastText } }
+
     return [
-        { label: 'HOME', to: '/home', icon: <HomeIcon fontSize='large' style={{ color: theme.palette.primary.contrastText }} /> },
-        { label: 'CREATE NEW VOTING EVENT', to: '/create', icon: <CreateIcon  fontSize='large' style={{ color: theme.palette.primary.contrastText }}/> },
-        { label: 'VOTE IN EXISTING VOTING', to: '/vote', icon: <PersonAddIcon fontSize='large' style={{ color: theme.palette.primary.contrastText }}/> },
-        { label: 'VIEW CURRENT RESULTS', to: '/view', icon: <AssessmentIcon fontSize='large' style={{ color: theme.palette.primary.contrastText }}/> },
+        { label: 'HOME', to: '/home', icon: <HomeIcon fontSize='large' { ...commonProps } /> },
+        { label: 'CREATE NEW VOTING EVENT', to: '/create', icon: <CreateIcon  fontSize='large'  { ...commonProps }/> },
+        { label: 'VOTE IN EXISTING VOTING', to: '/vote', icon: <PersonAddIcon fontSize='large'  { ...commonProps }/> },
+        { label: 'VIEW CURRENT RESULTS', to: '/view', icon: <AssessmentIcon fontSize='large'  { ...commonProps }/> },
     ]
 }
 

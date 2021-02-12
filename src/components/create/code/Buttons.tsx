@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGetCodeStyles } from './getCodeStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 
@@ -14,7 +14,7 @@ type ButtonProps = {
 const Buttons: React.FC<ButtonProps> = ({ setActiveStep, submitData, valuesAreMissing }) => {
 
 
-    const classes = useGetCodeStyles()
+    const classes = useStyles()
 
     const goBack = () => {
         setActiveStep(3)

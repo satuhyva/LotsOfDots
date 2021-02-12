@@ -4,7 +4,7 @@ import Step from '@material-ui/core/Step'
 import Typography from '@material-ui/core/Typography'
 import StepLabel from '@material-ui/core/StepLabel'
 import StepButton from '@material-ui/core/StepButton'
-import { useCreateVotingStepperStyles } from './createVotingStepperStyles'
+import { useStyles } from './styles'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
 import HelpIcon from '@material-ui/icons/Help'
 import { StepsWithValues } from '../../../types/StepsWithValues'
@@ -17,7 +17,7 @@ type CreateStepperProps = {
 }
 
 const getIcon = (isActiveStep: boolean, hasAValue: boolean) => {
-    const classes = useCreateVotingStepperStyles()
+    const classes = useStyles()
     const iconClass = isActiveStep ? classes.iconActive : classes.iconNotActive
     if (hasAValue) {
         return <CheckCircleIcon className={iconClass}/>
@@ -29,7 +29,7 @@ const getIcon = (isActiveStep: boolean, hasAValue: boolean) => {
 
 const CreateVotingStepper: React.FC<CreateStepperProps> = ({ activeStep, setActiveStep, stepsWithValues }) => {
 
-    const classes = useCreateVotingStepperStyles()
+    const classes = useStyles()
 
     return(
         <Stepper alternativeLabel nonLinear activeStep={activeStep} data-testid='stepper'>

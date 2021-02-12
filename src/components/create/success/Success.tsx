@@ -1,53 +1,41 @@
 import React from 'react'
-import { useSuccessStyles } from './successStyles'
-// import Typography from '@material-ui/core/Typography'
-import { StepsWithValues } from '../../../types/StepsWithValues'
-// import PreviewVoting from './PreviewVoting'
-// import MissingParameters from './MissingParameters'
-// import Buttons from './Buttons'
-// import { getFormattedVotingData } from './getFormattedVotingData'
-// import submitVotingService from '../services/submitVotingService'
-// import { getStepsWithMissingValues } from './getStepsWithMissingValues'
+import { useStyles } from './styles'
+import Typography from '@material-ui/core/Typography'
+import { Link } from 'react-router-dom'
 
 
 
 type SuccessProps = {
-    stepsWithValues: StepsWithValues,
     code: string | undefined,
 }
 
-const Success: React.FC<SuccessProps> = ({ stepsWithValues, code }) => {
-    console.log(stepsWithValues, code)
-    const classes = useSuccessStyles()
-    // const [errorMessage, setErrorMessage] = useState(undefined)
+const Success: React.FC<SuccessProps> = ({ code }) => {
+    const classes = useStyles()
 
-    // const stepsWithMissingValues = getStepsWithMissingValues(stepsWithValues)
-
-    // const submitVotingData = async () => {
-    //     console.log('submitVotingData')
-    //     const votingData = getFormattedVotingData(stepsWithValues)
-    //     const submissionResponse = await submitVotingService.submitVotingData(votingData)
-    //     console.log(submissionResponse)
-    // }
 
 
     return(
         <div className={classes.outerContainer}>
-            {/* <div className={classes.container} data-testid='GetCode'>
-                <Typography variant='h6' className={classes.text}>
-                    GET VOTING CODE
-                </Typography>
-                {stepsWithMissingValues.length > 0 ?
-                    <MissingParameters stepsWithMissingValues={stepsWithMissingValues}/>
-                    :
-                    <PreviewVoting stepsWithValues={stepsWithValues}/>
-                }
-                <Buttons
-                    setActiveStep={setActiveStep}
-                    submitData={submitVotingData}
-                    valuesAreMissing={stepsWithMissingValues.length > 0}
-                />
-            </div> */}
+            <Typography variant='h6' className={classes.title}>Successfully created voting event.</Typography>
+            <Typography variant='h6' className={classes.text}>
+                    VOTING CODE:
+            </Typography>
+            <Typography variant='h4' className={classes.text}>
+                <strong>{code}</strong>
+            </Typography>
+            <Typography className={classes.info}>
+                Give this code to participants and start voting!
+            </Typography>
+            <Typography className={classes.linkText}>
+                <Link to='/vote' className={classes.link}>
+                    Vote in this voting event 
+                </Link>
+            </Typography>
+            <Typography className={classes.linkText}>
+                <Link to='/view' className={classes.link}>
+                    View this voting 
+                </Link>
+            </Typography>
         </div>
 
       

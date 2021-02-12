@@ -1,4 +1,4 @@
-# https://spin.atomicobject.com/2020/01/20/github-actions-react-node/
+
 
 name: Deployment pipeline
 
@@ -7,7 +7,6 @@ on:
     branches:
       - master
 
-# https://time2hack.com/auto-publish-github-pages-github-actions/
 
 jobs:
   simple_deployment:
@@ -30,12 +29,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-      # - name: deploy to github pages
-      #   run: |
-      #     git config user.name "satuhyva" && git config "hyvarinen.satu.i@gmail.com" 
-      #     npm run deploy
-      # - uses: akhileshns/heroku-deploy@v3.8.9
-      #   with:
-      #     heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-      #     heroku_app_name: "lotsofdots-client" 
-      #     heroku_email: "hyvarinen.satu.i@gmail.com"

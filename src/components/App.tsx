@@ -5,7 +5,7 @@ import AppContextWithStateProvider from '../state/AppContextWithStateProvider'
 import { BrowserRouter as Router} from 'react-router-dom'
 import HeaderWithNavigation from './headerWithNavigation/HeaderWithNavigation'
 import LotsOfDots from './LotsOfDots'
-// import Testing from './components/Testing'
+
 
 
 const App: React.FC = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useQuestionStyles } from './questionStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
@@ -19,7 +19,7 @@ type EditQuestionProps = {
 
 const EditQuestion: React.FC<EditQuestionProps> = ({ currentQuestion, saveQuestion }) => {
 
-    const classes = useQuestionStyles()
+    const classes = useStyles()
     const [question, setQuestion] = useState(currentQuestion)
 
     const handleInputChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
