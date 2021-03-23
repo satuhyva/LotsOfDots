@@ -1,11 +1,11 @@
 import React from 'react'
-import { useHeaderStyles } from './headerStyles'
+import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 
 
 const Header: React.FC = () => {
 
-    const classes = useHeaderStyles()
+    const classes = useStyles()
 
     return(
         <div className={classes.container}>
@@ -15,9 +15,6 @@ const Header: React.FC = () => {
             <Typography className={classes.descriptionText}>
                 For quick and simple dot voting.
             </Typography>
-            {/* <Typography className={classes.descriptionText}>
-                No need for email or phone number data.
-            </Typography> */}
         </div>
       
     )

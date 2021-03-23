@@ -2,15 +2,16 @@ import React from 'react'
 import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import Buttons from '../buttons/Buttons'
-import { Step, Count } from '../../../types/StepsWithValues'
+import { StepType } from '../../../types/create-voting/StepType'
+import { CountType } from '../../../types/create-voting/CountType'
 import RadioButtons from './RadioButtons'
 
 
 
 type SettingCountProps = {
     setActiveStep: (newStep: number) => void,
-    updateStepsWithValues: (stepWithUpdatedValue: Step) => void,
-    step: Count,
+    updateStepsWithValues: (stepWithUpdatedValue: StepType) => void,
+    step: CountType,
 }
 
 const SettingCount: React.FC<SettingCountProps> = ({ setActiveStep, updateStepsWithValues, step }) => {

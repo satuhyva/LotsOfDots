@@ -4,7 +4,7 @@ import { initialState } from '../types/State'
 import AppContext from './AppContext'
 
 
-const AppContextWithStateProvider: React.FC = ({ children }) => {
+const AppContextWithState: React.FC = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState)
 
     return (
@@ -14,7 +14,7 @@ const AppContextWithStateProvider: React.FC = ({ children }) => {
     )
 }
 
-export default AppContextWithStateProvider
+export default AppContextWithState
 
 
 

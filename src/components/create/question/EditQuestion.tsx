@@ -36,7 +36,7 @@ const EditQuestion: React.FC<EditQuestionProps> = ({ currentQuestion, saveQuesti
             </Typography>
             <TextField
                 value={question}
-                placeholder='For example: &#10;Where should we go on next holiday?'
+                placeholder='For example: &#10;Where should we go on holiday?'
                 variant='outlined'
                 multiline
                 rows={5}

@@ -33,7 +33,7 @@ describe('EDIT QUESTION COMPONENT', () => {
 
     it('allows typing new question', async () => {
         const component = createComponent()
-        const inputTextArea = await screen.findAllByPlaceholderText('For example: Where should we go on next holiday?')
+        const inputTextArea = await screen.findAllByPlaceholderText('For example: Where should we go on holiday?')
         fireEvent.change(inputTextArea[0], {
             target: { value: 'Test question?'}
         })
@@ -43,7 +43,7 @@ describe('EDIT QUESTION COMPONENT', () => {
     it('displays save-button only after typing some text', async () => {
         const component = createComponent()
         expect(component.container).not.toHaveTextContent('SAVE')
-        const inputTextArea = await screen.findAllByPlaceholderText('For example: Where should we go on next holiday?')
+        const inputTextArea = await screen.findAllByPlaceholderText('For example: Where should we go on holiday?')
         fireEvent.change(inputTextArea[0], {
             target: { value: 'Test question?'}
         })
@@ -53,7 +53,7 @@ describe('EDIT QUESTION COMPONENT', () => {
     it('allows saving a newly typed question', async () => {
         const saveQuestionMock = jest.fn()
         const component = createComponent(saveQuestionMock)
-        const inputTextArea = await screen.findAllByPlaceholderText('For example: Where should we go on next holiday?')
+        const inputTextArea = await screen.findAllByPlaceholderText('For example: Where should we go on holiday?')
         fireEvent.change(inputTextArea[0], {
             target: { value: 'Test question?'}
         })

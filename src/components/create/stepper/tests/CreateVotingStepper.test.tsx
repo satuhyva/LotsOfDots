@@ -2,12 +2,12 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import CreateVotingStepper from '../CreateVotingStepper'
-import { StepsWithValues } from '../../../../types/StepsWithValues'
+import { StepsWithValuesType } from '../../../../types/create-voting/StepsWithValuesType'
 
 
 // jest -i components/create/stepper/CreateVotingStepper.test.tsx
 
-const stepsWithValues: StepsWithValues = [
+const stepsWithValues: StepsWithValuesType = [
     { index: 0, label: 'question', value:  undefined },
     { index: 1, label: 'options', value: undefined },
     { index: 2, label: 'count', value: undefined },

@@ -1,26 +1,27 @@
 import React, { useState } from 'react'
-import CreateVotingStepper from './stepper/CreateVotingStepper'
-import { StepsWithValues } from '../../types/StepsWithValues'
-import { initialStepValues } from './stepper/initialStepValues'
+import CreateVotingStepper from '../stepper/CreateVotingStepper'
+import { StepsWithValuesType } from '../../../types/create-voting/StepsWithValuesType'
+import { initialStepValues } from '../stepper/initialStepValues'
 import CreateVotingTitle from './CreateVotingTitle'
-import CreateQuestion from './question/CreateQuestion'
-import { Step } from '../../types/StepsWithValues'
+import CreateQuestion from '../question/CreateQuestion'
+import { StepType } from '../../../types/create-voting/StepType'
 import { getStepsWithUpdatedValues } from './getStepsWithUpdatedValues'
-import SettingIdentity from './identity/SettingIdentity'
-import VotingOptions from './options/VotingOptions'
-import SettingCount from './count/SettingCount'
-import GetCode from './code/GetCode'
-import Success from './success/Success'
+import SettingIdentity from '../identity/SettingIdentity'
+import VotingOptions from '../options/VotingOptions'
+import SettingCount from '../count/SettingCount'
+import GetCode from '../code/GetCode'
+import Success from '../success/Success'
 
 
-const CreateVoting: React.FC = () => {
+
+const CreateVotingMainPage: React.FC = () => {
 
 
     const [activeStep, setActiveStep] = useState(0)
-    const [stepsWithValues, setStepsWithValues] = useState<StepsWithValues>(initialStepValues)
+    const [stepsWithValues, setStepsWithValues] = useState<StepsWithValuesType>(initialStepValues)
     const [code, setCode] = useState<string | undefined>(undefined)
 
-    const updateStepsWithValues = (stepWithUpdatedValue: Step) => {
+    const updateStepsWithValues = (stepWithUpdatedValue: StepType) => {
         const stepsWithUpdatedValues = getStepsWithUpdatedValues(stepWithUpdatedValue, stepsWithValues)
         setStepsWithValues(stepsWithUpdatedValues)
     }
@@ -54,4 +55,4 @@ const CreateVoting: React.FC = () => {
     )
 }
 
-export default CreateVoting
+export default CreateVotingMainPage

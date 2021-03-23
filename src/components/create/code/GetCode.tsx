@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
-import { StepsWithValues } from '../../../types/StepsWithValues'
+import { StepsWithValuesType } from '../../../types/create-voting/StepsWithValuesType'
 import PreviewVoting from './PreviewVoting'
 import MissingParameters from './MissingParameters'
 import Buttons from './Buttons'
@@ -16,7 +16,7 @@ import { actionTypes } from '../../../state/actions'
 
 type GetCodeProps = {
     setActiveStep: (newStep: number) => void,
-    stepsWithValues: StepsWithValues,
+    stepsWithValues: StepsWithValuesType,
     setCode: (newCode: string) => void,
     resetValues: () => void
 }
@@ -46,7 +46,7 @@ const GetCode: React.FC<GetCodeProps> = ({ setActiveStep, stepsWithValues, setCo
 
 
     return(
-        <div className={classes.outerContainer}>
+        <div className={classes.outerContainer} id='get-code'>
             <div className={classes.container} data-testid='GetCode'>
                 <Typography variant='h6' className={classes.text}>
                     GET VOTING CODE

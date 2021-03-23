@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/extend-expect'
 import DisplayQuestion from '../DisplayQuestion'
 
 
-// jest -i components/create/question/DisplayQuestion.test.tsx
+// jest -i components/create/question/tests/DisplayQuestion.test.tsx
 
 
 const createComponent = (startEditingMock?: typeof jest.fn, current?: string) => {

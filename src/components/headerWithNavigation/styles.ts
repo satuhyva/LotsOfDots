@@ -3,7 +3,7 @@ import { Theme } from '@material-ui/core'
 
 
 
-export const useHeaderWithNavigationStyles = makeStyles((theme: Theme) => 
+export const useStyles = makeStyles((theme: Theme) => 
     createStyles({
         outerContainer: {
             display: 'flex',

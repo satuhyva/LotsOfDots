@@ -1,7 +1,7 @@
 import { VoteSubmissionData } from './service'
-import { StepsWithValues } from '../../../types/StepsWithValues'
+import { StepsWithValuesType } from '../../../types/create-voting/StepsWithValuesType'
 
-export const getFormattedVotingData = (stepsWithValues: StepsWithValues): VoteSubmissionData => {
+export const getFormattedVotingData = (stepsWithValues: StepsWithValuesType): VoteSubmissionData => {
     let votingData = {}
     if (stepsWithValues.every(item => item !== undefined)) {
         votingData = {

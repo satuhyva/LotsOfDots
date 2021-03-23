@@ -1,9 +1,9 @@
 import { Voting } from './Voting'
-import { modeOfUse } from './ModeOfUse'
+import { ModeOfUseEnum } from './mode-of-use/ModeOfUseEnum'
 
 
 export type State = {
-    modeOfUse: modeOfUse | undefined,
+    modeOfUse: ModeOfUseEnum | undefined,
     votingNumber: string | undefined,
     votingData: Voting | undefined
 }

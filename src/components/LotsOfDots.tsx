@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react'
 import * as BrowserRouter from 'react-router-dom'
 
 const Home = lazy(() => import('./home/Home'))
-const CreateVoting = lazy(() => import('./create/CreateVoting'))
+const CreateVotingMainPage = lazy(() => import('./create/main/CreateVotingMainPage'))
 const Vote = lazy(() => import('./vote/vote-main/Vote'))
 const ViewVoting = lazy(() => import('./view/ViewVoting'))
 
@@ -21,7 +21,7 @@ const LotsOfDots: React.FC = () => {
                     <Vote/>
                 </BrowserRouter.Route>
                 <BrowserRouter.Route path='/create'>
-                    <CreateVoting/>
+                    <CreateVotingMainPage/>
                 </BrowserRouter.Route>
                 <BrowserRouter.Route path='/view'>
                     <ViewVoting/>

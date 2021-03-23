@@ -2,18 +2,24 @@ import { makeStyles, createStyles } from '@material-ui/core/styles'
 import { Theme } from '@material-ui/core'
 
 
-export const useCreateVotingStyles = makeStyles((theme: Theme) => 
+export const useStyles = makeStyles((theme: Theme) => 
     createStyles({
-        pageTitleContainer: {
+        container: {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: 20,
-            marginBottom: -5,
+            paddingLeft: 20,
+            paddingBottom: 5,
         },
-        text: {
+        titleText: {
             color: theme.palette.primary.main,
+            paddingTop: 5,
         },
+        descriptionText: {
+            color: theme.palette.primary.main,
+            fontSize: 13,
+            marginBottom: -3,
+        }
     })
 )

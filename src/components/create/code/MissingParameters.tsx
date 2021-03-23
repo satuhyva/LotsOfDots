@@ -1,12 +1,12 @@
 import React from 'react'
 import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
-import { Step } from '../../../types/StepsWithValues'
+import { StepType } from '../../../types/create-voting/StepType'
 
 
 
 type MissingParametersProps = {
-    stepsWithMissingValues: Step[],
+    stepsWithMissingValues: StepType[],
 }
 
 const MissingParameters: React.FC<MissingParametersProps> = ({ stepsWithMissingValues }) => {

@@ -36,7 +36,7 @@
     "test": "jest",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "eslint": "eslint './src/***/**/*.{ts,tsx}'",
+    "eslint": "eslint './src/**/*.{ts,tsx}'",
     "test:watch": "jest --watch",
     "eject": "react-scripts eject"
   },

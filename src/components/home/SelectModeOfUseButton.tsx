@@ -2,14 +2,14 @@ import React from 'react'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import { useStyles } from './styles'
-import { UseModeWithDescription } from './ModesOfUseDictionary'
-import { modeOfUse } from '../../types/ModeOfUse'
+import { UseModeWithDescriptionType } from '../../types/mode-of-use/UseModeWithDescriptionType'
+import { ModeOfUseEnum } from '../../types/mode-of-use/ModeOfUseEnum'
 import * as BrowserRouter from 'react-router-dom'
 
 
 interface UseModeSelectionButtonProps {
-    modeWithDescription: UseModeWithDescription,
-    selectModeOfUse: (modeOfUse: modeOfUse) => void
+    modeWithDescription: UseModeWithDescriptionType,
+    selectModeOfUse: (modeOfUse: ModeOfUseEnum) => void
 }
 
 

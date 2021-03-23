@@ -2,15 +2,16 @@ import React from 'react'
 import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import Buttons from '../buttons/Buttons'
-import { Step, Identity } from '../../../types/StepsWithValues'
+import { StepType } from '../../../types/create-voting/StepType'
+import { IdentityType } from '../../../types/create-voting/IdentityType'
 import RadioButtons from './RadioButtons'
 
 
 
 type SettingIdentityProps = {
     setActiveStep: (newStep: number) => void,
-    updateStepsWithValues: (stepWithUpdatedValue: Step) => void,
-    step: Identity,
+    updateStepsWithValues: (stepWithUpdatedValue: StepType) => void,
+    step: IdentityType,
 }
 
 const SettingIdentity: React.FC<SettingIdentityProps> = ({ setActiveStep, updateStepsWithValues, step }) => {

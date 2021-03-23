@@ -1,4 +1,4 @@
-import { modeOfUse } from '../types/ModeOfUse'
+import { ModeOfUseEnum } from '../types/mode-of-use/ModeOfUseEnum'
 import { Voting } from '../types/Voting'
 
 
@@ -12,7 +12,7 @@ export enum actionTypes {
 export type Action = 
 | {
     type: actionTypes.SET_MODE_OF_USE,
-    data: modeOfUse | undefined
+    data: ModeOfUseEnum | undefined
 }
 | {
     type: actionTypes.SET_VOTING_NUMBER,

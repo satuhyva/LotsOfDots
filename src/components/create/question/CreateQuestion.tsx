@@ -2,16 +2,18 @@ import React, { useState } from 'react'
 import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import Buttons from '../buttons/Buttons'
-import { Step, Question } from '../../../types/StepsWithValues'
+import { QuestionType } from '../../../types/create-voting/QuestionType'
+import { StepType } from '../../../types/create-voting/StepType'
 import EditQuestion from './EditQuestion'
 import DisplayQuestion from './DisplayQuestion'
 
 
 type CreateQuestionProps = {
     setActiveStep: (newStep: number) => void,
-    updateStepsWithValues: (stepWithUpdatedValue: Step) => void,
-    step: Question,
+    updateStepsWithValues: (stepWithUpdatedValue: StepType) => void,
+    step: QuestionType,
 }
+
 
 const CreateQuestion: React.FC<CreateQuestionProps> = ({ setActiveStep, updateStepsWithValues, step }) => {
 

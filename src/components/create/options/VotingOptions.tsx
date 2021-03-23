@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
 import Buttons from '../buttons/Buttons'
-import { Step, Options } from '../../../types/StepsWithValues'
+import { StepType } from '../../../types/create-voting/StepType'
+import { OptionsType } from '../../../types/create-voting/OptionsType'
 import OptionsList from './OptionsList'
 import AddOrEditOption from './AddOrEditOption'
 import { getUpdatedCurrentOptionsList } from './getUpdatedCurrentOptionsList'
@@ -13,8 +14,8 @@ import Button from '@material-ui/core/Button'
 
 type VotingOptionsProps = {
     setActiveStep: (newStep: number) => void,
-    updateStepsWithValues: (stepWithUpdatedValue: Step) => void,
-    step: Options,
+    updateStepsWithValues: (stepWithUpdatedValue: StepType) => void,
+    step: OptionsType,
 }
 
 export enum OptionListActions {

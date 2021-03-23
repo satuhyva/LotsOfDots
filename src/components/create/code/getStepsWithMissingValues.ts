@@ -1,7 +1,7 @@
+import { StepType } from '../../../types/create-voting/StepType'
+import { StepsWithValuesType } from '../../../types/create-voting/StepsWithValuesType'
 
-import { StepsWithValues, Step } from '../../../types/StepsWithValues'
-
-export const getStepsWithMissingValues = (stepsWithValues: StepsWithValues): Step[] => {
+export const getStepsWithMissingValues = (stepsWithValues: StepsWithValuesType): StepType[] => {
     return stepsWithValues.filter(step => {
         if (step.value === undefined && step.label !== 'code') return true
         if (step.index === 1) {

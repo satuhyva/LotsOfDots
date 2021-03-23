@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/extend-expect'
 import CreateQuestion from '../CreateQuestion'
 
 
-// jest -i components/create/question/CreateQuestion.test.tsx
+// jest -i components/create/question/tests/CreateQuestion.test.tsx
 
 
 const createComponent = (setActiveStepMock?: typeof jest.fn, updateStepsWithValuesMock?: typeof jest.fn, currentValue?: string) => {
@@ -55,7 +55,7 @@ describe('CREATE QUESTION COMPONENT', () => {
     it('allows setting value to question', async () => {
         const setValueMock = jest.fn()
         const component = createComponent(jest.fn(), setValueMock)
-        const inputTextArea = await screen.findAllByPlaceholderText('For example: Where should we go on next holiday?')
+        const inputTextArea = await screen.findAllByPlaceholderText('For example: Where should we go on holiday?')
         fireEvent.change(inputTextArea[0], {
             target: { value: 'Test question?'}
         })

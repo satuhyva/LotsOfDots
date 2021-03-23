@@ -1,11 +1,11 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
-import { useCreateVotingStyles } from './createVotingStyles'
+import { useStyles } from './styles'
 
 
 const CreateVotingTitle: React.FC = () => {
 
-    const classes = useCreateVotingStyles()
+    const classes = useStyles()
 
     return(
         <div className={classes.pageTitleContainer}>

@@ -1,12 +1,12 @@
 import React from 'react'
 import { useStyles } from './styles'
 import Typography from '@material-ui/core/Typography'
-import { StepsWithValues } from '../../../types/StepsWithValues'
+import { StepsWithValuesType } from '../../../types/create-voting/StepsWithValuesType'
 
 
 
 type PreviewVotingProps = {
-    stepsWithValues: StepsWithValues,
+    stepsWithValues: StepsWithValuesType,
 }
 
 const PreviewVoting: React.FC<PreviewVotingProps> = ({ stepsWithValues }) => {
